@@ -20,9 +20,8 @@
 </span>
 
 
-
 <p align="center">
-   MiniCPM-o 4.5 <a href="https://huggingface.co/openbmb/MiniCPM-o-4_5">🤗</a> <a href="https://openbmb.github.io/MiniCPM-o-Demo/">📞</a> <a href="http://211.93.21.133:18121/">🤖</a> | MiniCPM-V 4.0 <a href="https://huggingface.co/openbmb/MiniCPM-V-4">🤗</a>  | <a href="https://github.com/OpenSQZ/MiniCPM-V-Cookbook">🍳 Cookbook</a> | <a href="https://openbmb.github.io/minicpm-o-4_5/">Audio Casebook</a> | <a href="https://openbmb.github.io/minicpm-o-4_5-omni/">Omni Full-Duplex Casebook</a>
+   MiniCPM-o 4.5 <a href="https://huggingface.co/openbmb/MiniCPM-o-4_5">🤗</a> <a href="https://openbmb.github.io/MiniCPM-o-Demo/">📞</a> <a href="http://211.93.21.133:18121/">🤖</a> | <a href="https://huggingface.co/papers/2604.27393">📄 Technical Report</a> | MiniCPM-V 4.0 <a href="https://huggingface.co/openbmb/MiniCPM-V-4">🤗</a>  | <a href="https://github.com/OpenSQZ/MiniCPM-V-Cookbook">🍳 Cookbook</a>
 </p>
 
 </div>
@@ -44,6 +43,8 @@
 > [!NOTE]
 > [2026.02.06] 🥳 🥳 🥳 We open-sourced a realtime web demo deployable on your own devices like Mac or GPU. [Try it now](#deploy-a-realtime-web-demo-on-your-own-device)!
 
+
+* [2026.05.07] 📢📢📢 We release the MiniCPM-o 4.5 technical report, introducing the key techniques behind its real-time full-duplex omni-modal interaction. Read it [here](https://huggingface.co/papers/2604.27393).
 
 * [2026.02.05] 📢📢📢 We note the web demo may experience latency issues due to network conditions. We are working actively to provide a Docker image for local deployment of the real-time interactive Demo as soon as possible. Please stay tuned!
 
@@ -116,9 +117,12 @@
   - [Duplex Omni Mode](#duplex-omni-mode)
   - [Half-Duplex Omni Mode](#half-duplex-omni-mode)
   - [Half-Duplex Realtime Speech Conversation Mode](#half-duplex-realtime-speech-conversation-mode)
+  - [Speech and Audio Mode](#speech-and-audio-mode)
   - [Visual Understanding](#visual-understanding)
   - [Structured Content Input](#structured-content-input)
 - [Deploy a Realtime Web Demo on Your Own Device](#deploy-a-realtime-web-demo-on-your-own-device)
+  - [Option A (Recommended): **PyTorch Inference with Nvidia GPU** for 100% model precision with no deductions in performance.](#option-a-recommended-pytorch-inference-with-nvidia-gpu-for-100-model-precision-with-no-deductions-in-performance)
+  - [Option B: **llama.cpp-omni** for end-side inference with PCs like Mac and low-resource devices.](#option-b-llamacpp-omni-for-end-side-inference-with-pcs-like-mac-and-low-resource-devices)
 - [Supported Frameworks](#supported-frameworks)
   - [FlagOS](#flagos)
   - [vLLM, SGLang, llama.cpp, Ollama](#vllm-sglang-llamacpp-ollama)
@@ -1131,7 +1135,7 @@ Advancing popular visual capabilities from MiniCPM-V series, MiniCPM-o 4.5 can p
 #### Omnimodal Full-Duplex Conversation <!-- omit in toc -->
 
 > [!NOTE]
-> For detailed speech conversation examples, refer to [Omni Full-Duplex Casebook](https://openbmb.github.io/minicpm-o-4_5-omni/)
+> For detailed omnimodal full-duplex examples, refer to [Omnimodal Full-Duplex Casebook](https://openbmb.github.io/minicpm-o-4_5-omni/)
 
 
 #### Realtime Speech Conversation <!-- omit in toc -->

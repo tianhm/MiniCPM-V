@@ -20,7 +20,7 @@
 
 <!-- <br> -->
 <p align="center">
-   MiniCPM-o 4.5 <a href="https://huggingface.co/openbmb/MiniCPM-o-4_5">🤗</a> <a href="https://openbmb.github.io/MiniCPM-o-Demo/">📞</a> <a href="http://211.93.21.133:18121/">🤖</a> | MiniCPM-V 4.0 <a href="https://huggingface.co/openbmb/MiniCPM-V-4">🤗</a>  | <a href="https://github.com/OpenSQZ/MiniCPM-V-Cookbook">🍳 使用指南</a> | <a href="https://openbmb.github.io/minicpm-o-4_5/">语音样例</a> | <a href="https://openbmb.github.io/minicpm-o-4_5-omni/">全模态全双工样例</a>
+   MiniCPM-o 4.5 <a href="https://huggingface.co/openbmb/MiniCPM-o-4_5">🤗</a> <a href="https://openbmb.github.io/MiniCPM-o-Demo/">📞</a> <a href="http://211.93.21.133:18121/">🤖</a> | <a href="https://huggingface.co/papers/2604.27393">📄 技术报告</a> | MiniCPM-V 4.0 <a href="https://huggingface.co/openbmb/MiniCPM-V-4">🤗</a>  | <a href="https://github.com/OpenSQZ/MiniCPM-V-Cookbook">🍳 使用指南</a>
 </p>
 
 </div>
@@ -36,6 +36,8 @@
 
 > [!NOTE]
 > [2026.02.06] 🥳 🥳 🥳 我们开源了可在 Mac 或 GPU 等本地设备上部署的实时 Web Demo。[立即体验](#本地-demo-部署)！
+
+* [2026.05.07] 📢📢📢 我们发布了 MiniCPM-o 4.5 技术报告，介绍了其实现实时全双工全模态交互的关键技术。欢迎点击[这里](https://huggingface.co/papers/2604.27393)查看。
 
 * [2026.02.05] 📢📢📢 我们注意到，由于网络状况原因，网页版演示可能会出现显著的延迟问题。我们正在积极工作，将尽快提供实时交互演示版的Docker镜像供本地部署，敬请持续关注！
 * [2026.02.03] 🔥🔥🔥 我们开源了 MiniCPM-o 4.5，该模型视觉和语音能力达到了 Gemini 2.5 Flash 水平，同时支持全双工多模态流式交互。欢迎试用！
@@ -92,9 +94,12 @@
   - [双工全模态模式](#双工全模态模式)
   - [单工全模态模式](#单工全模态模式)
   - [单工实时语音对话模式](#单工实时语音对话模式)
+  - [语音与音频模式](#语音与音频模式)
   - [纯视觉模式](#纯视觉模式)
   - [结构化内容输入](#结构化内容输入)
 - [本地 Demo 部署](#本地-demo-部署)
+  - [方案 A（推荐）：**基于 PyTorch + Nvidia GPU 推理**，100% 模型精度，性能无损。](#方案-a推荐基于-pytorch--nvidia-gpu-推理100-模型精度性能无损)
+  - [方案 B：**llama.cpp-omni**，适用于 Mac 等 PC 及低资源设备的端侧推理。](#方案-bllamacpp-omni适用于-mac-等-pc-及低资源设备的端侧推理)
 - [框架支持](#框架支持)
   - [FlagOS](#flagos)
   - [vLLM、SGLang、llama.cpp、Ollama](#vllmsglangllamacppollama)
@@ -1099,7 +1104,7 @@
 #### 全双工全模态对话 <!-- omit in toc -->
 
 > [!NOTE]
-> 更全面的全双工全模态对话案例展示，请参考[全模态全双工展示页面](https://openbmb.github.io/minicpm-o-4_5-omni/)
+> 更全面的全双工全模态对话案例展示，请参考[全双工全模态展示页面](https://openbmb.github.io/minicpm-o-4_5-omni/)
 
 
 #### 实时语音对话 <!-- omit in toc -->
