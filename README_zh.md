@@ -136,8 +136,8 @@
     <td align="center" width="50%"><b>单并发请求首响延迟 TTFT (ms)</b></td>
   </tr>
   <tr>
-    <td align="center" valign="middle"><img src="./assets/minicpmv4.6/throughput.png" width="110%"></img></td>
-    <td align="center" valign="middle"><img src="./assets/minicpmv4.6/ttft.png" width="100%"></img></td>
+    <td align="center" valign="middle"><img src="./assets/minicpmv4.6/throughput-zh.png" width="110%"></img></td>
+    <td align="center" valign="middle"><img src="./assets/minicpmv4.6/ttft-zh.png" width="100%"></img></td>
   </tr>
 </table>
 
