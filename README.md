@@ -121,7 +121,7 @@
 - 📱 **Broad Mobile Platform Coverage.**
   MiniCPM-V 4.6 can be deployed across all three mainstream mobile platforms — iOS, Android, and HarmonyOS. With every edge adaptation code open-sourced, developers can reproduce the on-device experience in [just a few steps](#deploy-minicpm-v-46-on-ios-android-and-harmonyos-platforms-).
 - 🛠️ **Developer Friendly.**
-  MiniCPM-V 4.6 is adapted to [inference frameworks](#supported-inference-and-training-frameworks) such as vLLM, SGLang, llama.cpp, Ollama, and supports [fine-tuning ecosystems](#supported-inference-and-training-frameworks) such as SWIFT and LLaMA-Factory. Developers can quickly customize models for new domains and tasks on consumer-grade GPUs. We provide multiple quantized variants across GGUF, BNB, AWQ, and GPTQ formats.
+  MiniCPM-V 4.6 is adapted to [inference frameworks](#supported-inference-and-training-frameworks) such as SGLang, vLLM, llama.cpp, Ollama, and supports [fine-tuning ecosystems](#supported-inference-and-training-frameworks) such as SWIFT and LLaMA-Factory. Developers can quickly customize models for new domains and tasks on consumer-grade GPUs. We provide multiple quantized variants across GGUF, BNB, AWQ, and GPTQ formats.
 
 
 ### Evaluation <!-- omit in toc -->
@@ -348,7 +348,7 @@ We **open-source edge deployment guidance** of all these platforms, so that deve
 
 #### Use MiniCPM-V 4.6 in Other Inference and Training Frameworks <!-- omit in toc -->
 
-MiniCPM-V 4.6 supports [inference frameworks](#supported-inference-and-training-frameworks) including vLLM, SGLang, llama.cpp, Ollama, and [training frameworks](#supported-inference-and-training-frameworks) including LLaMA-Factory, SWIFT.
+MiniCPM-V 4.6 supports [inference frameworks](#supported-inference-and-training-frameworks) including SGLang, vLLM, llama.cpp, Ollama, and [training frameworks](#supported-inference-and-training-frameworks) including LLaMA-Factory, SWIFT.
 
 
 ### Acknowledgements <!-- omit in toc -->

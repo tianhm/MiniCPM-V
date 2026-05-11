@@ -107,7 +107,7 @@
 - 📱 **广泛的手机平台支持。**
   MiniCPM-V 4.6 可在 iOS、安卓、鸿蒙三大主流手机平台完成部署，并开源配备了端侧适配代码，开发者可在自己的设备上[一键复现端侧体验](#ios安卓鸿蒙端侧平台推理-)。
 - 🛠️ **开发者友好。**
-  MiniCPM-V 4.6 适配 vLLM、SGLang、llama.cpp、Ollama 等[推理框架](#训练和推理框架支持)，并支持 SWIFT、LLaMA-Factory 等[微调生态](#训练和推理框架支持)。开发者可以在消费级显卡上为新领域、新任务快速定制模型。我们还提供了覆盖 GGUF、BNB、AWQ、GPTQ 格式的多种量化版本权重，适配多样的部署需求。
+  MiniCPM-V 4.6 适配 SGLang、vLLM、llama.cpp、Ollama 等[推理框架](#训练和推理框架支持)，并支持 SWIFT、LLaMA-Factory 等[微调生态](#训练和推理框架支持)。开发者可以在消费级显卡上为新领域、新任务快速定制模型。我们还提供了覆盖 GGUF、BNB、AWQ、GPTQ 格式的多种量化版本权重，适配多样的部署需求。
 
 
 ### 性能评估 <!-- omit in toc -->
@@ -330,7 +330,7 @@ curl -s http://localhost:8000/v1/chat/completions \
 
 #### 在其他训练、推理框架中使用 MiniCPM-V 4.6 <!-- omit in toc -->
 
-MiniCPM-V 4.6 支持 vLLM, SGLang, llama.cpp, Ollama 等[推理框架](#训练和推理框架支持)，和 LLaMA-Factory, SWIFT 等[训练框架](#训练和推理框架支持)。
+MiniCPM-V 4.6 支持 SGLang, vLLM, llama.cpp, Ollama 等[推理框架](#训练和推理框架支持)，和 LLaMA-Factory, SWIFT 等[训练框架](#训练和推理框架支持)。
 
 ### 致谢 <!-- omit in toc -->
 
