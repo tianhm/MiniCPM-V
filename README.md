@@ -2,7 +2,7 @@
 
 <img src="./assets/minicpm_v_and_minicpm_o_title.png" width="500em" ></img> 
 
-**A Gemini 2.5 Flash Level MLLM for Vision, Speech, and Full-Duplex Multimodal Live Streaming on Your Phone**
+**A Pocket-Sized MLLM for Ultra-Efficient Image and Video Understanding on Your Phone**
 
   <strong>[中文](./README_zh.md) |
   English</strong>
@@ -10,60 +10,41 @@
 
 
 <span style="display: inline-flex; align-items: center; margin-right: 2px;">
-  <img src="./assets/wechat.png" alt="WeChat" style="margin-right: 4px;">
-  <a href="docs/wechat.md" target="_blank"> WeChat</a> &nbsp;|
+  <img src="./assets/feishu_logo.png" alt="feishu" width="15" height="15" style="margin-right: 4px;">
+  <a href="./assets/feishu_qrcode.png" target="_blank"> Feishu (Lark)</a> &nbsp;|
 </span>
 &nbsp;
 <span style="display: inline-flex; align-items: center; margin-left: -8px;">
 <img src="./assets/discord.png" alt="Discord" style="margin-right: 4px;">
-  <a href="https://discord.gg/N2RnxGdJ" target="_blank"> Discord</a> &nbsp;
+  <a href="https://discord.gg/pBZuTA3hj" target="_blank"> Discord</a> &nbsp;
 </span>
 
 
 <p align="center">
-   MiniCPM-o 4.5 <a href="https://huggingface.co/openbmb/MiniCPM-o-4_5">🤗</a> <a href="https://openbmb.github.io/MiniCPM-o-Demo/">📞</a> <a href="http://211.93.21.133:18121/">🤖</a> | <a href="https://huggingface.co/papers/2604.27393">📄 Technical Report</a> | MiniCPM-V 4.0 <a href="https://huggingface.co/openbmb/MiniCPM-V-4">🤗</a>  | <a href="https://github.com/OpenSQZ/MiniCPM-V-Cookbook">🍳 Cookbook</a>
+   MiniCPM-V 4.6 <a href="https://huggingface.co/openbmb/MiniCPM-V-4.6">🤗</a> <a href="https://huggingface.co/spaces/openbmb/MiniCPM-V-4.6-Demo">🤖</a> <a href="https://github.com/OpenBMB/MiniCPM-V-Apps/blob/main/DOWNLOAD.md">📱</a> | MiniCPM-o 4.5 <a href="https://huggingface.co/openbmb/MiniCPM-o-4_5">🤗</a> <a href="https://openbmb.github.io/MiniCPM-o-Demo/">📞</a> <a href="http://211.93.21.133:18121/">🤖</a> | <a href="https://huggingface.co/papers/2604.27393">📄 Technical Report</a> | <a href="https://github.com/OpenSQZ/MiniCPM-V-Cookbook">🍳 Cookbook</a>
 </p>
 
 </div>
 
-**MiniCPM-o** is the latest series of on-device multimodal LLMs (MLLMs) ungraded from MiniCPM-V. The models can now take image, video, text, and audio as inputs and provide high-quality text and speech outputs in an end-to-end fashion. The model series is designed for **strong performance and efficient deployment**. The most notable models in the series currently include:
+**MiniCPM-V** and **MiniCPM-o** are multimodal LLM series designed for **strong performance and efficient deployment on devices**. MiniCPM-V focuses on efficient vision-language understanding across image, video and text inputs. MiniCPM-o extends the family toward real-time end-to-end omnimodal interaction with streaming video and audio inputs plus text and speech outputs. The most notable models in the series currently include:
 
 
-- **MiniCPM-o 4.5**: 🔥🔥🔥 The latest and most capable model in the series. With a total of 9B parameters, this end-to-end model **approaches Gemini 2.5 Flash in vision, speech, and full-duplex multimodal live streaming**, making it one of the most versatile and performant models in the open-source community. The new full-duplex multimodal live streaming capability means that the output streams (speech and text), and the real-time input streams (video and audio) do not block each other. This **enables MiniCPM-o 4.5 to see, listen, and speak simultaneously** in a real-time omnimodal conversation, and perform **proactive interactions** such as proactive reminding. The improved voice mode supports bilingual real-time speech conversation in a more natural, expressive, and stable way, and also allows for voice cloning. It also advances MiniCPM-V's visual capabilities such as strong OCR capability, trustworthy behavior and multilingual support, etc. We also rollout a **high-performing llama.cpp-omni inference framework together with a WebRTC Demo**, to bring this full-duplex multimodal live streaming experience available on local devices such as Macs.
+- **MiniCPM-V 4.6**: 🔥🔥🔥 The latest and most efficient model in the MiniCPM-V series. With a total of 1.3B parameters, it surpasses larger models like Gemma4-E2B-it in performance, while showing superior efficiency than smaller models like Qwen3.5-0.8B (achieving ~1.5x token throughput). Powered by the latest **intra-ViT early compression technique** in [LLaVA-UHD v4](https://github.com/THUMAI-Lab/LLaVA-UHD-v4), MiniCPM-V 4.6 **reduces the visual encoding computation cost by more than 50%**,  and supports **mixed 4x/16x visual token compression rate** for a more flexible performance-efficiency trade-off in different tasks. The model can be deployed across **common mobile platforms, including iOS, Android and HarmonyOS**, with edge adaptation code open-sourced.
 
-- **MiniCPM-V 4.0**: ⭐️⭐️⭐️ An efficient model in the MiniCPM-V series. With a total of 4B parameters, the model surpasses GPT-4.1-mini-20250414 in image understanding on the OpenCompass evaluation. With its small parameter size and efficient architecture, MiniCPM-V 4.0 is an ideal choice for on-device deployment on the phone.
+- **MiniCPM-o 4.5**: ⭐️⭐️⭐️ The latest and most capable model in the MiniCPM-o series. With a total of 9B parameters, this end-to-end model **approaches Gemini 2.5 Flash in vision, speech, and full-duplex multimodal live streaming**, making it one of the most versatile and performant models in the open-source community. The new full-duplex multimodal live streaming capability means that the output streams (speech and text), and the real-time input streams (video and audio) do not block each other. This **enables MiniCPM-o 4.5 to see, listen, and speak simultaneously** in a real-time omnimodal conversation, and perform **proactive interactions** such as proactive reminding.
 
 
 
 
 ## News <!-- omit in toc -->
 
-#### 📌 Pinned
-
-> [!NOTE]
-> [2026.02.06] 🥳 🥳 🥳 We open-sourced a realtime web demo deployable on your own devices like Mac or GPU. [Try it now](#deploy-a-realtime-web-demo-on-your-own-device)!
-
-
-* [2026.05.07] 📢📢📢 We release the MiniCPM-o 4.5 technical report, introducing the key techniques behind its real-time full-duplex omni-modal interaction. Read it [here](https://huggingface.co/papers/2604.27393).
-
-* [2026.02.05] 📢📢📢 We note the web demo may experience latency issues due to network conditions. We are working actively to provide a Docker image for local deployment of the real-time interactive Demo as soon as possible. Please stay tuned!
-
+* [2026.05.11] 🔥🔥🔥 We open-source MiniCPM-V 4.6, with mixed 4x/16x visual token compression. Powered by strong encoding efficiency and its lightweight 1.3B scale, it is our most edge-deployment-friendly model to date, achieving ~1.5x token throughput compared to Qwen3.5 0.8B. Try it now!
+* [2026.02.06] 🥳 🥳 🥳 We open-sourced a realtime web demo deployable on your own devices like Mac or GPU. [Try it now](#web-demo-deployment)!
 * [2026.02.03] 🔥🔥🔥 We open-source MiniCPM-o 4.5, which matches Gemini 2.5 Flash on vision and speech, and supports full-duplex multimodal live streaming. Try it now!
-
-
-* [2025.09.18] 📢📢📢 MiniCPM-V 4.5 technical report is now released! See [here](./docs/MiniCPM_V_4_5_Technical_Report.pdf).
-
 * [2025.08.26] 🔥🔥🔥 We open-source MiniCPM-V 4.5, which outperforms GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B. It advances popular capabilities of MiniCPM-V, and brings useful new features. Try it now!
-
 * [2025.08.01] ⭐️⭐️⭐️ We open-sourced the [MiniCPM-V & o Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook)! It provides comprehensive guides for diverse user scenarios, paired with our new [Docs Site](https://minicpm-o.readthedocs.io/en/latest/index.html) for smoother onboarding.
-
 * [2025.03.01] 🚀🚀🚀 RLAIF-V, the alignment technique of MiniCPM-o, is accepted by CVPR 2025 Highlights！The [code](https://github.com/RLHF-V/RLAIF-V), [dataset](https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset), [paper](https://arxiv.org/abs/2405.17220) are open-sourced!
-
-* [2025.01.24] 📢📢📢 MiniCPM-o 2.6 technical report is released! See [here](https://openbmb.notion.site/MiniCPM-o-2-6-A-GPT-4o-Level-MLLM-for-Vision-Speech-and-Multimodal-Live-Streaming-on-Your-Phone-185ede1b7a558042b5d5e45e6b237da9).
-
 * [2025.01.19] ⭐️⭐️⭐️ MiniCPM-o tops GitHub Trending and reaches top-2 on Hugging Face Trending!
-
-
 * [2024.05.23] 🔥🔥🔥 MiniCPM-V tops GitHub Trending and Hugging Face Trending! Our demo, recommended by Hugging Face Gradio’s official account, is available [here](https://huggingface.co/spaces/openbmb/MiniCPM-Llama3-V-2_5). Come and try it out!
 
 <br>
@@ -71,9 +52,13 @@
 <details> 
 <summary>Click to view more news.</summary>
 
+* [2026.05.07] 📢📢📢 We release the MiniCPM-o 4.5 technical report, introducing the key techniques behind its real-time full-duplex omni-modal interaction. Read it [here](https://huggingface.co/papers/2604.27393).
+* [2026.02.05] 📢📢📢 We note the web demo may experience latency issues due to network conditions. We are working actively to provide a Docker image for local deployment of the real-time interactive Demo as soon as possible. Please stay tuned!
+* [2025.09.18] 📢📢📢 MiniCPM-V 4.5 technical report is now released! See [here](https://arxiv.org/abs/2509.18154).
 * [2025.09.01] ⭐️⭐️⭐️ MiniCPM-V 4.5 has been officially supported by [llama.cpp](https://github.com/ggml-org/llama.cpp/pull/15575), [vLLM](https://github.com/vllm-project/vllm/pull/23586), and [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory/pull/9022). You are welcome to use it directly through these official channels! Support for additional frameworks such as [Ollama](https://github.com/ollama/ollama/pull/12078) and [SGLang](https://github.com/sgl-project/sglang/pull/9610) is actively in progress.
 * [2025.08.02] 🚀🚀🚀 We open-source MiniCPM-V 4.0, which outperforms GPT-4.1-mini-20250414 in image understanding. It advances popular features of MiniCPM-V 2.6, and largely improves the efficiency. We also open-source the iOS App on iPhone and iPad. Try it now!
 * [2025.06.20] ⭐️⭐️⭐️ Our official [Ollama repository](https://ollama.com/openbmb) is released. Try our latest models with [one click](https://ollama.com/openbmb/minicpm-o2.6)！
+* [2025.01.24] 📢📢📢 MiniCPM-o 2.6 technical report is released! See [here](https://openbmb.notion.site/MiniCPM-o-2-6-A-GPT-4o-Level-MLLM-for-Vision-Speech-and-Multimodal-Live-Streaming-on-Your-Phone-185ede1b7a558042b5d5e45e6b237da9).
 * [2025.01.23] 💡💡💡 MiniCPM-o 2.6 is now supported by [Align-Anything](https://github.com/PKU-Alignment/align-anything), a framework by PKU-Alignment Team for aligning any-to-any modality large models with human intentions. It supports DPO and SFT fine-tuning on both vision and audio. Try it now!
 * [2025.01.19] 📢 **ATTENTION!** We are currently working on merging MiniCPM-o 2.6 into the official repositories of llama.cpp, Ollama, and vllm. Until the merge is complete, please USE OUR LOCAL FORKS of [llama.cpp](https://github.com/OpenBMB/llama.cpp/blob/minicpm-omni/examples/llava/README-minicpmo2.6.md), [Ollama](https://github.com/OpenBMB/ollama/blob/minicpm-v2.6/examples/minicpm-v2.6/README.md), and [vllm](https://github.com/OpenBMB/MiniCPM-o?tab=readme-ov-file#efficient-inference-with-llamacpp-ollama-vllm). **Using the official repositories before the merge may lead to unexpected issues**.
 * [2025.01.17] We have updated the usage of MiniCPM-o 2.6 int4 quantization version and resolved the model initialization error. Click [here](https://huggingface.co/openbmb/MiniCPM-o-2_6-int4) and try it now!
@@ -100,7 +85,7 @@
 * [2024.04.23] MiniCPM-V-2.0 supports vLLM now! Click [here](#inference-with-vllm) to view more details.
 * [2024.04.18] We create a HuggingFace Space to host the demo of MiniCPM-V 2.0 at [here](https://huggingface.co/spaces/openbmb/MiniCPM-V-2)!
 * [2024.04.17] MiniCPM-V-2.0 supports deploying [WebUI Demo](#webui-demo) now!
-* [2024.04.15] MiniCPM-V-2.0 now also supports [fine-tuning](https://github.com/modelscope/swift/blob/main/docs/source/Multi-Modal/minicpm-v-2最佳实践.md) with the SWIFT framework!
+* [2024.04.15] MiniCPM-V-2.0 now also supports [fine-tuning](https://github.com/modelscope/swift/blob/main/docs/source/Multi-Modal/minicpm-v-2最佳实践.md) with the SWIFT framework, with streaming inference enabled!
 * [2024.04.12] We open-source MiniCPM-V 2.0, which achieves comparable performance with Gemini Pro in understanding scene text and outperforms strong Qwen-VL-Chat 9.6B and Yi-VL 34B on <a href="https://rank.opencompass.org.cn/leaderboard-multimodal">OpenCompass</a>, a comprehensive evaluation over 11 popular benchmarks. Click <a href="https://openbmb.vercel.app/minicpm-v-2">here</a> to view the MiniCPM-V 2.0 technical blog.
 * [2024.03.14] MiniCPM-V now supports [fine-tuning](https://github.com/modelscope/swift/blob/main/docs/source/Multi-Modal/minicpm-v最佳实践.md) with the SWIFT framework. Thanks to [Jintao](https://github.com/Jintao-Huang) for the contribution！
 * [2024.03.01] MiniCPM-V can now be deployed on Mac!
@@ -111,29 +96,272 @@
 ## Contents <!-- omit in toc -->
 
 
+- [MiniCPM-V 4.6](#minicpm-v-46)
+  - [Usages](#usages)
 - [MiniCPM-o 4.5](#minicpm-o-45)
-- [Offline Inference Examples with Transformers](#offline-inference-examples-with-transformers)
-  - [Model Initialization](#model-initialization)
-  - [Duplex Omni Mode](#duplex-omni-mode)
-  - [Half-Duplex Omni Mode](#half-duplex-omni-mode)
-  - [Half-Duplex Realtime Speech Conversation Mode](#half-duplex-realtime-speech-conversation-mode)
-  - [Speech and Audio Mode](#speech-and-audio-mode)
-  - [Visual Understanding](#visual-understanding)
-  - [Structured Content Input](#structured-content-input)
-- [Deploy a Realtime Web Demo on Your Own Device](#deploy-a-realtime-web-demo-on-your-own-device)
-  - [Option A (Recommended): **PyTorch Inference with Nvidia GPU** for 100% model precision with no deductions in performance.](#option-a-recommended-pytorch-inference-with-nvidia-gpu-for-100-model-precision-with-no-deductions-in-performance)
-  - [Option B: **llama.cpp-omni** for end-side inference with PCs like Mac and low-resource devices.](#option-b-llamacpp-omni-for-end-side-inference-with-pcs-like-mac-and-low-resource-devices)
-- [Supported Frameworks](#supported-frameworks)
-  - [FlagOS](#flagos)
-  - [vLLM, SGLang, llama.cpp, Ollama](#vllm-sglang-llamacpp-ollama)
-  - [LLaMA-Factory, SWIFT](#llama-factory-swift)
+  - [Usages](#usages-1)
 - [MiniCPM-V \& o Cookbook](#minicpm-v--o-cookbook)
-- [MiniCPM-V 4.0](#minicpm-v-40)
+- [Supported Inference and Training Frameworks](#supported-inference-and-training-frameworks)
 - [Model Zoo](#model-zoo)
-- [Awesome work using MiniCPM-V \& MiniCPM-o](#awesome-work-using-minicpm-v--minicpm-o)
-- [Limitations](#limitations)
-- [Acknowledgements](#acknowledgements)
+- [Awesome work using MiniCPM-V \& o](#awesome-work-using-minicpm-v--o)
+- [Technical Reports and Key Techniques Papers](#technical-reports-and-key-techniques-papers)
 
+## MiniCPM-V 4.6
+
+**MiniCPM-V 4.6** is our most edge-deployment-friendly model to date. The model is built based on SigLIP2-400M and the Qwen3.5-0.8B LLM. It inherits the strong single-image, multi-image, and video understanding capabilities of MiniCPM-V family, while significantly improving computation efficiency. It also introduces mixed 4x/16x visual token compression. Notable features of MiniCPM-V 4.6 include:
+
+- 🔥 **Leading Foundation Capability.**
+  MiniCPM-V 4.6 scores 13 on the Artificial Analysis Intelligence Index benchmark, outperforming Qwen3.5-0.8B's score of 10 with 19x fewer token cost, and Qwen3.5-0.8B-Thinking's score of 11 with 43x fewer token cost. It also surpasses the larger Ministral 3 3B (score of 11).
+
+- 💪 **Strong Multimodal Capability.**
+  MiniCPM-V 4.6 outperforms Qwen3.5-0.8B on most vision-language understanding tasks, and reaches Qwen3.5 2B-level capability on many benchmarks including OpenCompass, RefCOCO, HallusionBench, MUIRBench, and OCRBench.
+- 🚀 **Ultra-Efficient Architecture.**
+  Based on the latest technique in [LLaVA-UHD v4](https://github.com/THUMAI-Lab/LLaVA-UHD-v4), MiniCPM-V 4.6 reduces the visual encoding computation FLOPs by more than 50%. It enables MiniCPM-V 4.6 to achieve better efficiency to even smaller models, achieving ~1.5x token throughput compared to Qwen3.5-0.8B. 
+  It also supports mixed 4x/16x visual token compression rate, allowing flexible switching between accuracy and speed.
+- 📱 **Broad Mobile Platform Coverage.**
+  MiniCPM-V 4.6 can be deployed across all three mainstream mobile platforms — iOS, Android, and HarmonyOS. With every edge adaptation code open-sourced, developers can reproduce the on-device experience in [just a few steps](#deploy-minicpm-v-46-on-ios-android-and-harmonyos-platforms-).
+- 🛠️ **Developer Friendly.**
+  MiniCPM-V 4.6 is adapted to [inference frameworks](#supported-inference-and-training-frameworks) such as vLLM, SGLang, llama.cpp, Ollama, and supports [fine-tuning ecosystems](#supported-inference-and-training-frameworks) such as SWIFT and LLaMA-Factory. Developers can quickly customize models for new domains and tasks on consumer-grade GPUs. We provide multiple quantized variants across GGUF, BNB, AWQ, and GPTQ formats.
+
+
+### Evaluation <!-- omit in toc -->
+
+**Overall Performance (Instruct)**
+
+<p align="center">
+  <img src="./assets/minicpmv4.6/instruct.png" width="90%"></img>
+</p>
+
+
+<details>
+<summary>Click to view MiniCPM-V 4.6-Thinking performance.</summary>
+
+
+<p align="center">
+  <img src="./assets/minicpmv4.6/thinking.png" width="90%"></img>
+</p>
+
+
+</details>
+
+<br>
+
+**MiniCPM-V 4.6 Inference Efficiency**
+<table align="center">
+  <tr>
+    <td align="center"><b>High-Concurrency Throughput</b></td>
+    <td align="center"><b>Single Request TTFT (ms)</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./assets/minicpmv4.6/throughput.png" width="90%"></img></td>
+    <td align="center"><img src="./assets/minicpmv4.6/ttft.png" width="100%"></img></td>
+  </tr>
+</table>
+
+
+### Examples <!-- omit in toc -->
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=Ch5UG1FoysM"><img src="./assets/minicpmv4.6/video_play.png" width="70%"></a>
+</div>
+
+MiniCPM-V 4.6 can be deployed across three mainstream end-side platforms — **iOS, Android and HarmonyOS**. The clips below are raw screen recordings on phone devices without edition.
+
+<table align="center">
+  <tr>
+    <td align="center"><b>iPhone</b><br><sub>iPhone 17 Pro Max</sub></td>
+    <td align="center"><b>Android</b><br><sub>Redmi K70</sub></td>
+    <td align="center"><b>HarmonyOS</b><br><sub>HUAWEI nova 14</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./assets/minicpmv4.6/v46_iphone_en_handwriting.gif" width="100%"/></td>
+    <td align="center"><img src="./assets/minicpmv4.6/v46_android_en_refraction.gif" width="100%"/></td>
+    <td align="center"><img src="./assets/minicpmv4.6/v46_harmonyos_en_ticket.gif" width="100%"/></td>
+  </tr>
+</table>
+
+
+### Usages
+
+#### Inference with Transformers <!-- omit in toc -->
+<details>
+<summary>Click to show inference examples with Transformers. </summary>
+
+##### Installation <!-- omit in toc -->
+
+```bash
+pip install "transformers[torch]>=5.7.0" torchvision torchcodec
+```
+
+> **Note on CUDA compatibility:** `torchcodec` (used for video decoding) may have compatibility issues with certain CUDA versions. For example, `torch>=2.11` bundles CUDA 13.1 by default, while environments with CUDA 12.x may encounter errors such as `RuntimeError: Could not load libtorchcodec`. Two workarounds:
+>
+> 1. **Replace `torchcodec` with `PyAV`** — supports both image and video inference without CUDA version constraints:
+>    ```bash
+>    pip install "transformers[torch]>=5.7.0" torchvision av
+>    ```
+> 2. **Pin the CUDA version** when installing torch to match your environment (e.g. CUDA 12.8):
+>    ```bash
+>    pip install "transformers>=5.7.0" torchvision torchcodec --index-url https://download.pytorch.org/whl/cu128
+>    ```
+
+##### Load Model <!-- omit in toc -->
+
+```python
+from transformers import AutoModelForImageTextToText, AutoProcessor
+
+model_id = "openbmb/MiniCPM-V-4.6"
+
+processor = AutoProcessor.from_pretrained(model_id)
+model = AutoModelForImageTextToText.from_pretrained(
+    model_id, torch_dtype="auto", device_map="auto"
+)
+
+# Flash Attention 2 is recommended for better acceleration and memory saving,
+# especially in multi-image and video scenarios.
+# model = AutoModelForImageTextToText.from_pretrained(
+#     model_id,
+#     torch_dtype=torch.bfloat16,
+#     attn_implementation="flash_attention_2",
+#     device_map="auto",
+# )
+```
+
+##### Image Inference <!-- omit in toc -->
+
+```python
+messages = [
+    {
+        "role": "user",
+        "content": [
+            {"type": "image", "url": "https://huggingface.co/datasets/openbmb/DemoCase/resolve/main/refract.png"},
+            {"type": "text", "text": "What causes this phenomenon?"},
+        ],
+    }
+]
+
+downsample_mode = "16x"  # Using `downsample_mode="4x"` for Finer Detail
+
+inputs = processor.apply_chat_template(
+    messages, tokenize=True, add_generation_prompt=True,
+    return_dict=True, return_tensors="pt",
+    downsample_mode=downsample_mode,
+    max_slice_nums=36,
+).to(model.device)
+
+generated_ids = model.generate(**inputs, downsample_mode=downsample_mode, max_new_tokens=512)
+generated_ids_trimmed = [
+    out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+]
+output_text = processor.batch_decode(
+    generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+)
+print(output_text[0])
+```
+
+##### Video Inference <!-- omit in toc -->
+
+```python
+messages = [
+    {
+        "role": "user",
+        "content": [
+            {"type": "video", "url": "https://huggingface.co/datasets/openbmb/DemoCase/resolve/main/football.mp4"},
+            {"type": "text", "text": "Describe this video in detail. Follow the timeline and focus on on-screen text, interface changes, main actions, and scene changes."},
+        ],
+    }
+]
+
+downsample_mode = "16x"  # Using `downsample_mode="4x"` for Finer Detail
+
+inputs = processor.apply_chat_template(
+    messages, tokenize=True, add_generation_prompt=True,
+    return_dict=True, return_tensors="pt",
+    downsample_mode=downsample_mode,
+    max_num_frames=128,
+    stack_frames=1,
+    max_slice_nums=1,
+    use_image_id=False,
+).to(model.device)
+
+generated_ids = model.generate(**inputs, downsample_mode=downsample_mode, max_new_tokens=2048)
+generated_ids_trimmed = [
+    out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+]
+output_text = processor.batch_decode(
+    generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+)
+print(output_text[0])
+```
+
+##### Advanced Parameters <!-- omit in toc -->
+
+You can customize image/video processing by passing additional parameters to `apply_chat_template`:
+
+| Parameter | Default | Applies to | Description |
+|-----------|---------|------------|-------------|
+| `downsample_mode` | `"16x"` | Image & Video | Visual token downsampling. `"16x"` merges tokens for efficiency; `"4x"` keeps 4× more tokens for finer detail. Must also be passed to `generate()`. |
+| `max_slice_nums` | `9` | Image & Video | Maximum number of slices when splitting a high-resolution image. Higher values preserve more detail for large images. Recommended: `36` for image, `1` for video. |
+| `max_num_frames` | `128` | Video only | Maximum number of main frames sampled from the video. |
+| `stack_frames` | `1` | Video only | Total sample points per second. `1` = main frame only (no stacking). `N` (N>1) = 1 main frame + N−1 sub-frames per second; the sub-frames are composited into a grid image and interleaved with main frames. Recommended: `3` or `5`. |
+| `use_image_id` | `True` | Image & Video | Whether to prepend `<image_id>N</image_id>` tags before each image/frame placeholder. Recommended: `True` for image, `False` for video. |
+
+> **Note:** `downsample_mode` must be passed to **both** `apply_chat_template` (for correct placeholder count) and `generate` (for the vision encoder). All other parameters only need to be passed to `apply_chat_template`.
+
+##### Serving with `transformers serve` <!-- omit in toc -->
+
+Hugging Face Transformers includes a lightweight OpenAI-compatible server for quick testing and moderate-load deployment.
+
+```bash
+pip install "transformers[serving]>=5.7.0"
+```
+
+Start the server:
+
+```bash
+transformers serve openbmb/MiniCPM-V-4.6 --port 8000 --host 0.0.0.0 --continuous-batching
+```
+
+Send a request:
+
+```bash
+curl -s http://localhost:8000/v1/chat/completions \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "model": "openbmb/MiniCPM-V-4.6",
+    "messages": [{
+      "role": "user",
+      "content": [
+        {"type": "image_url", "image_url": {"url": "https://huggingface.co/datasets/openbmb/DemoCase/resolve/main/refract.png"}},
+        {"type": "text", "text": "What causes this phenomenon?"}
+      ]
+    }]
+  }'
+```
+
+</details>
+
+
+
+#### Deploy MiniCPM-V 4.6 on iOS, Android, and HarmonyOS Platforms <!-- omit in toc -->
+
+We **open-source edge deployment guidance** of all these platforms, so that developers can deploy on their own devices in a few steps. Try the apps via the [download page](https://github.com/OpenBMB/MiniCPM-V-Apps/blob/main/DOWNLOAD.md), or follow the [edge deployment guide](https://github.com/OpenBMB/MiniCPM-V-Apps) for the full source. 
+
+#### Use MiniCPM-V 4.6 in Other Inference and Training Frameworks <!-- omit in toc -->
+
+MiniCPM-V 4.6 supports [inference frameworks](#supported-inference-and-training-frameworks) including vLLM, SGLang, llama.cpp, Ollama, and [training frameworks](#supported-inference-and-training-frameworks) including LLaMA-Factory, SWIFT.
+
+
+### Acknowledgements <!-- omit in toc -->
+
+<details>
+<summary>Click to view acknowledgements.</summary>
+
+We would like to thank the following projects:
+* [Qwen3.5](https://huggingface.co/collections/Qwen/qwen35) for providing language backbone
+* [SigLIP2](https://github.com/google-research/big_vision/blob/main/big_vision/configs/proj/image_text/README_siglip2.md) for providing vision understanding module
+* [Transformers](https://github.com/huggingface/transformers)
+
+</details>
 
 ## MiniCPM-o 4.5
 
@@ -159,7 +387,7 @@ Advancing popular visual capabilities from MiniCPM-V series, MiniCPM-o 4.5 can p
 - **Full-Duplex Omni-modal Live Streaming Mechanism.** (1) We turn the offline modality encoder/decoders into online and full-duplex ones for streaming inputs/outputs. The speech token decoder models text and speech tokens in an interleaved fashion to support full-duplex speech generation (i.e., sync timely with new input). This also facilitates more stable long speech generation (e.g., > 1min).
 (2) **We sync all the input and output streams on timeline in milliseconds**, which are jointly modeled by a time-division multiplexing (TDM) mechanism for omni-modality streaming processing in the LLM backbone. It divides parallel omni-modality streams into sequential info groups within small periodic time slices.
 - **Proactive Interaction Mechanism.** The LLM continuously monitors the input video and audio streams, and decides at a frequency of 1Hz to speak or not. This high decision-making frequency together with full-duplex nature are curcial to enable the proactive interaction capability.
-- **Configurable Speech Modeling Design.** We inherent the multimodal system prompt design of MiniCPM-o 2.6, which includes a traditional text system prompt, and a new audio system prompt to determine the assistant voice. This enables cloning new voices and role play in inference time for speech conversation.
+- **Configurable Speech Modeling Design.** We inherit the multimodal system prompt design of MiniCPM-o 2.6, which includes a traditional text system prompt, and a new audio system prompt to determine the assistant voice. This enables cloning new voices and role play in inference time for speech conversation.
 
 
 
@@ -176,13 +404,16 @@ Advancing popular visual capabilities from MiniCPM-V series, MiniCPM-o 4.5 can p
 </div>
 
 
+&emsp;
+<br>
+
+<details>
+<summary>Click to view detailed MiniCPM-o 4.5 evaluation breakdowns.</summary>
+
 <div align="center">
   <img src="./assets/minicpm_o_45_main_exp_table.png", width=90%>
 </div>
 <strong>Note</strong>: Scores marked with ∗ are from our evaluation; others are cited from referenced reports. n/a indicates that the model does not support the corresponding modality. All results are reported in instruct mode/variant.
-
-&emsp;
-<br>
 
 <details>
 <summary>Click to view visual understanding results.</summary>
@@ -1124,13 +1355,17 @@ Advancing popular visual capabilities from MiniCPM-V series, MiniCPM-o 4.5 can p
 
 **Note:** Scores marked with ∗ are from our evaluation; others are cited from referenced reports.
 
-### Examples <!-- omit in toc -->
+</details>
 
-#### Overall <!-- omit in toc -->
+
+### Examples <!-- omit in toc -->
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=6UzC-O1Q-1U"><img src="./assets/minicpmo4_5/video_play.png", width=70%></a>
 </div>
+
+<details>
+<summary>Click to view detailed MiniCPM-o 4.5 examples and cases.</summary>
 
 #### Omnimodal Full-Duplex Conversation <!-- omit in toc -->
 
@@ -1256,9 +1491,14 @@ Advancing popular visual capabilities from MiniCPM-V series, MiniCPM-o 4.5 can p
 
 </details>
 
+</details>
 
-## Offline Inference Examples with Transformers
+### Usages
 
+<details>
+<summary>Click to show offline inference examples with Transformers.</summary>
+
+#### Inference using Hugging Face Transformers <!-- omit in toc -->
 Inference using Hugging Face Transformers on NVIDIA GPUs. Please ensure `transformers==4.51.0` is installed, as other versions may have compatibility issues (under investigation). Requirements tested on Python 3.10:
 
 - Without TTS or streaming inference:
@@ -1296,7 +1536,7 @@ pip install "transformers==4.51.0" accelerate "torch>=2.3.0,<=2.8.0" "torchaudio
 </details>
 
 
-### Model Initialization
+##### Model Initialization <!-- omit in toc -->
 
 <details>
 <summary>Click to show model initialization code.</summary>
@@ -1332,7 +1572,7 @@ model = duplex_model.as_simplex(reset_session=True)
 </details>
 
 
-### Duplex Omni Mode
+##### Duplex Omni Mode <!-- omit in toc -->
 Full-duplex streaming inference for real-time or recorded video conversations.
 
 <details>
@@ -1430,10 +1670,10 @@ generate_duplex_video(
 </details>
 
 
-### Half-Duplex Omni Mode
+##### Half-Duplex Omni Mode <!-- omit in toc -->
 We provide two inference modes: chat and streaming.
 
-#### Chat Inference <!-- omit in toc -->
+###### Chat Inference <!-- omit in toc -->
 
 <details>
 <summary>Click to show chat inference code.</summary>
@@ -1487,7 +1727,7 @@ print(res)
 
 </details>
 
-#### Streaming Inference <!-- omit in toc -->
+###### Streaming Inference <!-- omit in toc -->
 
 <details>
 <summary>Click to show streaming inference code.</summary>
@@ -1570,7 +1810,7 @@ else:
 
 </details>
 
-### Half-Duplex Realtime Speech Conversation Mode
+##### Half-Duplex Realtime Speech Conversation Mode <!-- omit in toc -->
 
 
 <details>
@@ -1698,7 +1938,7 @@ else:
 
 </details>
 
-#### Speech Conversation as a Versatile and Vibe AI Assistant <!-- omit in toc -->
+###### Speech Conversation as a Versatile and Vibe AI Assistant <!-- omit in toc -->
 
 
 <details>
@@ -1738,7 +1978,7 @@ sys_msg = {
 </details>
 
 
-#### General Speech Conversation with Custom Voice and Custom System Profile <!-- omit in toc -->
+###### General Speech Conversation with Custom Voice and Custom System Profile <!-- omit in toc -->
 
 <details>
 <summary>Click to show custom voice conversation code.</summary>
@@ -1799,9 +2039,9 @@ sys_msg = {
 </details>
 
 
-### Speech and Audio Mode
+##### Speech and Audio Mode <!-- omit in toc -->
 
-#### Zero-shot Text-to-speech (TTS) <!-- omit in toc -->
+###### Zero-shot Text-to-speech (TTS) <!-- omit in toc -->
 
 
 <details>
@@ -1856,7 +2096,7 @@ res = model.chat(
 </details>
 
 
-#### Mimick <!-- omit in toc -->
+###### Mimick <!-- omit in toc -->
 
 <details>
 <summary>Click to show mimick code.</summary>
@@ -1895,7 +2135,7 @@ res = model.chat(
 </details>
 
 
-#### Addressing Various Audio Understanding Tasks <!-- omit in toc -->
+###### Addressing Various Audio Understanding Tasks <!-- omit in toc -->
 
 
 <details>
@@ -1939,11 +2179,11 @@ print(res)
 </details>
 
 
-### Visual Understanding
+##### Visual Understanding <!-- omit in toc -->
 
 `MiniCPM-o-4.5` shares the same inference methods as `MiniCPM-V-4.5`.
 
-#### Chat with Single Image <!-- omit in toc -->
+###### Chat with Single Image <!-- omit in toc -->
 
 <details>
 <summary>Click to show single image chat code.</summary>
@@ -1974,7 +2214,7 @@ print(res)
 
 </details>
 
-#### Chat with Multiple Images <!-- omit in toc -->
+###### Chat with Multiple Images <!-- omit in toc -->
 
 <details>
 <summary>Click to show Python code for multi-image input.</summary>
@@ -1997,7 +2237,7 @@ print(answer)
 
 </details>
 
-#### In-Context Few-Shot Learning <!-- omit in toc -->
+###### In-Context Few-Shot Learning <!-- omit in toc -->
 
 <details>
 <summary>Click to show Python code for few-shot learning.</summary>
@@ -2028,7 +2268,7 @@ print(answer)
 
 </details>
 
-#### Chat with Video <!-- omit in toc -->
+###### Chat with Video <!-- omit in toc -->
 
 <details>
 <summary>Click to show Python code for video input.</summary>
@@ -2061,7 +2301,7 @@ print(answer)
 </details>
 
 
-### Structured Content Input
+##### Structured Content Input <!-- omit in toc -->
 
 <details>
 <summary>Click to show structured content input details.</summary>
@@ -2103,10 +2343,15 @@ msgs = [
 </details>
 
 
+</details>
 
-## Deploy a Realtime Web Demo on Your Own Device
 
-### Option A (Recommended): **PyTorch Inference with Nvidia GPU** for 100% model precision with no deductions in performance.
+<details>
+<summary>Click to show how to deploy a realtime web demo on your own device.</summary>
+
+#### Web Demo Deployment <!-- omit in toc -->
+
+##### **PyTorch + Nvidia GPU**, lossless performance (Recommended) <!-- omit in toc -->
 
 We provide a PyTorch-based [simplified yet full-functional web demo](https://github.com/OpenBMB/minicpm-o-4_5-pytorch-simple-demo) which could boost the model inference performance, supports:
 
@@ -2122,7 +2367,10 @@ We provide a PyTorch-based [simplified yet full-functional web demo](https://git
 Requirements:
 - Nvidia GPU with at least 28GB GPU memory. *We are working on optimizing the model for lower GPU memory usage.*
 
-### Option B: **llama.cpp-omni** for end-side inference with PCs like Mac and low-resource devices.
+##### **llama.cpp-omni** for edge-side inference on PCs such as Mac and low-resource devices. <!-- omit in toc -->
+ 
+<details>
+<summary>Click to show deployment details.</summary>
 
 With a fully C++ implementation of `MiniCPM-o 4.5` and quantized weights, `llama.cpp-omni` supports:
 - half-duplex speech realtime conversation
@@ -2134,19 +2382,83 @@ Requirements:
 - For half-duplex speech realtime conversation: Apple M3/M4/M5 chip with at least 16GB RAM or low-resource Nvidia GPU with at least 12GB GPU memory
 - For full-duplex omnimodal live streaming: Apple M4 Max chip with at least 24GB RAM or low-resource Nvidia GPU with at least 12GB GPU memory
 
-## Supported Frameworks
+</details>
 
-### FlagOS
+</details>
+
+#### Use MiniCPM-o 4.5 in Other Inference and Training Frameworks <!-- omit in toc -->
+
+MiniCPM-o 4.5 supports [inference frameworks](#supported-inference-and-training-frameworks) including vLLM, SGLang, llama.cpp, Ollama, and [training frameworks](#supported-inference-and-training-frameworks) including LLaMA-Factory, SWIFT.
+
+
+
+### Limitations <!-- omit in toc -->
+
+<details>
+<summary>Click to view limitations.</summary>
+
+As an experimental trial, we find MiniCPM-o 4.5 has notable limitations worth further investigation and improvement.
+- **Foundation Capability.** The full-duplex omni-modality live streaminig capability still needs improvement in its foundation capability.
+- **Unstable Speech Output in Omni Mode.** Speech synthesis can mispronounce characters in full-duplex omni-modal live streaminig mode.
+- **Mixed Language.** The model can sometimes respond with mixed English and Chinese in speech and omni mode.
+- **High-latency on Web Demo.** Users may experience unusual high-latency or even miss part of model output fragments when using our web demo hosted on overseas servers. We recommend deploying the demo locally or with good network connections.
+
+</details>
+
+### Acknowledgements <!-- omit in toc -->
+
+<details>
+<summary>Click to view acknowledgements.</summary>
+
+We would like to thank the following projects:
+* [Qwen3](https://huggingface.co/Qwen/Qwen3-8B) for providing language backbone
+* [SigLIP2](https://github.com/google-research/big_vision/blob/main/big_vision/configs/proj/image_text/README_siglip2.md) for providing vision understanding module
+* [Whisper](https://github.com/openai/whisper) for providing audio and speech understanding module
+* [CosyVoice2](https://github.com/FunAudioLLM/CosyVoice) and [Step-Audio2](https://github.com/stepfun-ai/Step-Audio2) for providing speech tokenizer and high-efficiency Token2Wav module.
+* [Transformers](https://github.com/huggingface/transformers)
+
+</details>
+
+
+## MiniCPM-V & o Cookbook
+
+The [MiniCPM-V & o Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook) provides scenario-based recipes for deploying, fine-tuning, quantizing, and building demos with MiniCPM-V and MiniCPM-o. The [documentation website](https://minicpm-o.readthedocs.io/en/latest/index.html) presents these recipes in a structured way for quick lookup.
+
+It is organized for:
+
+* **Individuals**: Local inference, quantized deployment, and end-device demos.
+* **Enterprises**: Scalable serving, high-throughput inference, and production-oriented deployment.
+* **Researchers**: Fine-tuning, model adaptation, and experimental workflows.
+
+For framework-specific deployment and training guides, see [Supported Inference and Training Frameworks](#supported-inference-and-training-frameworks).
+
+
+## Supported Inference and Training Frameworks
+
+### Inference: vLLM, SGLang, llama.cpp, Ollama, FlagOS <!-- omit in toc -->
+
+We support inference with vLLM, SGLang, llama.cpp and Ollama. See the per-model deployment guides below, or refer to our [Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook) for more details.
+
+| Framework | MiniCPM-V 4.6 | MiniCPM-o 4.5 | MiniCPM-V 4.5 | MiniCPM-V 4.0 | Previous MiniCPM-V/o Models |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| vLLM | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/vllm/minicpm-v4_6_vllm.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/vllm/minicpm-o4_5_vllm.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/vllm/minicpm-v4_5_vllm.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/vllm/minicpm-v4_vllm.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/vllm/README.md) |
+| SGLang | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/sglang/minicpm-v4_6_sglang.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/sglang/MiniCPM-o4_5_sglang.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/sglang/minicpm-v4_5_sglang.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/sglang/MiniCPM-v4_sglang.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/sglang/README.md) |
+| llama.cpp | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/llama.cpp/minicpm-v4_6_llamacpp.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/llama.cpp/minicpm-o4_5_llamacpp.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/llama.cpp/minicpm-v4_5_llamacpp.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/llama.cpp/minicpm-v4_llamacpp.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/llama.cpp/README.md) |
+| Ollama | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/ollama/minicpm-v4_6_ollama.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/ollama/minicpm-o4_5_ollama.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/ollama/minicpm-v4_5_ollama.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/ollama/minicpm-v4_ollama.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/ollama/README.md) |
+
+#### FlagOS <!-- omit in toc -->
+
+FlagOS supports inference of MiniCPM-o 4.5 across six AI chip families, including Nvidia GPUs.
+
+<details>
+<summary>Click to show FlagOS support details.</summary>
 
 To enable large-scale deployment across different AI chips, Beijing Zhiyuan Research Institute, together with numerous research institutions, chip manufacturers, system vendors, and algorithm and software organizations both domestically and internationally, jointly initiated and established the FlagOS Open Source Community.
 
 The FlagOS community is dedicated to building a unified, open-source system software stack for various AI chips, encompassing core open-source projects such as a large-scale operator library, a unified AI compiler, parallel training and inference frameworks, and a unified communication library. It aims to create an open technology ecosystem connecting the “model-system-chip” layers. By enabling “develop once, deploy across chips”, FlagOS unlocks the computational potential of hardware, breaks down the ecosystem silos between different chip software stacks, and effectively reduces migration costs for developers. The FlagOS community fosters an AI hardware and software ecosystem, overcomes single-vendor closed-source monopolies, promotes widespread deployment of AI hardware technologies, and is committed to rooted in China while embracing global collaboration.
 Official website: https://flagos.io.
 
-<details>
-<summary>Click to show FlagOS details.</summary>
-
-#### FlagOS: Supporting Multiple AI Chips <!-- omit in toc -->
+##### FlagOS: Supporting Multiple AI Chips <!-- omit in toc -->
 
 Thanks to FlagOS’s unified multi-chip AI system software stack, MiniCPM-o 4.5 was adapted to 6 different AI chips in an extremely short time. Currently, the multi-chip version of MiniCPM-o 4.5 has been released on FlagRelease, FlagOS’s platform for automatic migration, adaptation, and deployment of large models across multi-architecture AI chips. Details are as follows:
 
@@ -2159,9 +2471,9 @@ Thanks to FlagOS’s unified multi-chip AI system software stack, MiniCPM-o 4.5 
 | Ascend-A3       | [MiniCPM-o-4.5-ascend-FlagOS](https://modelscope.cn/models/FlagRelease/MiniCPM-o-4.5-ascend-FlagOS) | [MiniCPM-o-4.5-ascend-FlagOS](https://huggingface.co/FlagRelease/MiniCPM-o-4.5-ascend-FlagOS) |
 | Zhenwu-810E     | [MiniCPM-o-4.5-zhenwu-FlagOS](https://modelscope.cn/models/FlagRelease/MiniCPM-o-4.5-zhenwu-FlagOS) | [MiniCPM-o-4.5-zhenwu-FlagOS](https://huggingface.co/FlagRelease/MiniCPM-o-4.5-zhenwu-FlagOS) |
 
-##### Comprehensive Evaluation <!-- omit in toc -->
+###### Comprehensive Evaluation <!-- omit in toc -->
 
-###### Transformers-FlagOS version <!-- omit in toc -->
+**Transformers-FlagOS version**
 
 Accuracy Difference between `USE_FLAGOS=1` on multi-backend and `USE_FLAGOS=0` on Nvidia-CUDA
 
@@ -2174,7 +2486,7 @@ Accuracy Difference between `USE_FLAGOS=1` on multi-backend and `USE_FLAGOS=0` o
 | Video-MME 0-shot avg@1 ↑ |   Metax-C550    |            0.75%            |
 
 
-###### VLLM-FlagOS version <!-- omit in toc -->
+**VLLM-FlagOS version**
 
 Accuracy Difference between `USE_FLAGGEMS=1 FLAGCX_PATH=/workspace/FlagCX` on Nvidia or `USE_FLAGGEMS=1` on ZHENW 810E, and launching vllm server directly on Nvidia
 
@@ -2188,13 +2500,13 @@ Accuracy Difference between `USE_FLAGGEMS=1 FLAGCX_PATH=/workspace/FlagCX` on Nv
 | CII-Bench ↑         | 0.40% | 0.13% |
 | Blink ↑             | 1.90% | 2.19% |
 
-#### FlagOS Usage <!-- omit in toc -->
+##### FlagOS Usage <!-- omit in toc -->
 
-##### FlagOS Performance Acceleration on Nvidia <!-- omit in toc -->
+###### FlagOS Performance Acceleration on Nvidia <!-- omit in toc -->
 
 On the Transformers version, under the premise of precision alignment between the CUDA and FlagOS ecosystems, FlagOS achieves a 6% performance improvement in total task execution time compared to CUDA.
 
-###### From FlagRelease【Recommendation】 <!-- omit in toc -->
+**From FlagRelease【Recommendation】**
 
 FlagRelease is a platform developed by the FlagOS team for automatic migration, adaptation, and deployment of large models across multi-architecture AI chips. The multi-chip version of MiniCPM-o 4.5 has already been released on FlagRelease. All necessary software packages are pre-installed on the platform, so users do not need to install anything.
 
@@ -2221,11 +2533,11 @@ FlagRelease is a platform developed by the FlagOS team for automatic migration, 
   | Zhenwu-810E | [MiniCPM-o-4.5-zhenwu-FlagOS](https://modelscope.cn/models/FlagRelease/MiniCPM-o-4.5-zhenwu-FlagOS) | [MiniCPM-o-4.5-zhenwu-FlagOS](https://huggingface.co/FlagRelease/MiniCPM-o-4.5-zhenwu-FlagOS) |  
 
 
-##### From Scratch <!-- omit in toc -->
+###### From Scratch <!-- omit in toc -->
 
 - Dependencies: Python 3.12, GLIBC 2.39, GLIBCXX 3.4.33, CXXABI 1.3.15
 
-###### Transformers <!-- omit in toc -->
+**Transformers**
 
 - Installing the FlagOS Operator Library
 
@@ -2262,7 +2574,7 @@ FlagRelease is a platform developed by the FlagOS team for automatic migration, 
   
   to accelerate this process with FlagOS.
 
-###### Vllm Version <!-- omit in toc -->
+**Vllm Version**
 
 - Installing the FlagOS Operator Library
 
@@ -2286,11 +2598,11 @@ FlagRelease is a platform developed by the FlagOS team for automatic migration, 
   ```
   to accelerate this process with FlagOS.
 
-#### Using FlagOS Unified Multi-Chip Backend Plugin <!-- omit in toc -->
+##### Using FlagOS Unified Multi-Chip Backend Plugin <!-- omit in toc -->
 
 [vllm-plugin-FL](https://github.com/flagos-ai/vllm-plugin-FL) is a plugin built for the vLLM inference/service framework. Developed on top of FlagOS’s unified multi-chip backend, it is designed to extend vLLM’s capabilities and performance across a variety of hardware environments.
 
-##### Using vllm-plugin-FL <!-- omit in toc -->
+###### Using vllm-plugin-FL <!-- omit in toc -->
 
 | Vendor | From Scratch | From FlagRelease |
 |:-------|:-------------|:----------------|
@@ -2298,620 +2610,41 @@ FlagRelease is a platform developed by the FlagOS team for automatic migration, 
 
 </details>
 
-### vLLM, SGLang, llama.cpp, Ollama
-
-We support inference with vLLM, SGLang, llama.cpp and Ollama. Refer to our [Cookbook](https://github.com/OpenSQZ/MiniCPM-V-Cookbook) for more details.
-
-### LLaMA-Factory, SWIFT
+### Training: LLaMA-Factory, SWIFT <!-- omit in toc -->
 
 We support fine-tuning with LLaMA-Factory, SWIFT. Refer to our [Cookbook](https://github.com/OpenSQZ/MiniCPM-V-Cookbook) for more details.
 
-## MiniCPM-V & o Cookbook
+| Framework | MiniCPM-V 4.6 | Previous MiniCPM-V/o Models | 
+|:---|:---:|:---:|
+| LLaMA-Factory | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/llamafactory_minicpmv46.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/llama-factory/finetune_llamafactory.md) | 
+| SWIFT | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/swift_minicpmv46.md) | [Guide](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/swift.md) | 
 
-Discover comprehensive, ready-to-deploy solutions for the MiniCPM-V and MiniCPM-o model series in our structured [Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook), which empowers developers to rapidly implement multimodal AI applications with integrated vision, speech, and live-streaming capabilities. Key features include:
-
-**Easy Usage Documentation**
-
-Our comprehensive [documentation website](https://minicpm-o.readthedocs.io/en/latest/index.html) presents every recipe in a clear, well-organized manner.
-All features are displayed at a glance, making it easy for you to quickly find exactly what you need.
-
-**Broad User Spectrum**
-
-We support a wide range of users, from individuals to enterprises and researchers.
-
-* **Individuals**: Enjoy effortless inference using Ollama ([V4](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/ollama/minicpm-v4_ollama.md), [o4.5](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/ollama/minicpm-o4_5_ollama.md)) and Llama.cpp ([V4](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/llama.cpp/minicpm-v4_llamacpp.md), [o4.5](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/llama.cpp/minicpm-o4_5_llamacpp.md)) with minimal setup.
-* **Enterprises**: Achieve high-throughput, scalable performance with vLLM ([V4](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/vllm/minicpm-v4_vllm.md), [o4.5](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/vllm/minicpm-o4_5_vllm.md)) and SGLang ([V4](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/sglang/MiniCPM-v4_sglang.md), [o4.5](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/deployment/sglang/MiniCPM-o4_5_sglang.md)).
-* **Researchers**: Leverage advanced frameworks including [Transformers](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/finetune_full.md), [LLaMA-Factory](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/finetune_llamafactory.md), [SWIFT](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/swift.md), and [Align-anything](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/finetune/align_anything.md) to enable flexible model development and cutting-edge experimentation.
-
-**Versatile Deployment Scenarios**
-
-Our ecosystem delivers optimal solution for a variety of hardware environments and deployment demands.
-
-* **Web Demo**: Full-duplex real-time video interaction solution with high responsiveness and low latency. [WebRTC_Demo](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/demo/web_demo/WebRTC_Demo/README.md).
-* **Quantized deployment**: Maximize efficiency and minimize resource consumption using [GGUF](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/quantization/gguf/minicpm-v4_gguf_quantize.md) and [BNB](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/quantization/bnb/minicpm-v4_bnb_quantize.md).
-* **End devices**: Bring powerful AI experiences to [iPhone and iPad](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/demo/ios_demo/ios.md), supporting offline and privacy-sensitive applications.
-
-
-
-
-## MiniCPM-V 4.0
-
-**MiniCPM-V 4.0** is an efficient model in the MiniCPM-V series. The model is built based on SigLIP2-400M and MiniCPM4-3B with a total of 4.1B parameters. It inherits the strong single-image, multi-image and video understanding performance of MiniCPM-V 2.6 with largely improved efficiency. Notable features of MiniCPM-V 4.0 include:
-
-- 🔥 **Leading Visual Capability.**
-   With only 4.1B parameters, MiniCPM-V 4.0 achieves an average score of 69.0 on OpenCompass, a comprehensive evaluation of 8 popular benchmarks, **outperforming GPT-4.1-mini-20250414, MiniCPM-V 2.6 (8.1B params, OpenCompass 65.2) and Qwen2.5-VL-3B-Instruct (3.8B params, OpenCompass 64.5)**. It also shows good performance in multi-image understanding and video understanding.
-
-- 🚀 **Superior Efficiency.**
-  Designed for on-device deployment, MiniCPM-V 4.0 runs smoothly on end devices. For example, it delivers **less than 2s first token delay and more than 17 token/s decoding on iPhone 16 Pro Max**, without heating problems. It also shows superior throughput under concurrent requests.
-
--  💫  **Easy Usage.**
-  MiniCPM-V 4.0 can be easily used in various ways including **llama.cpp, Ollama, vLLM, SGLang, LLaMA-Factory and local web demo** etc. We also open-source iOS App that can run on iPhone and iPad. Get started easily with our well-structured [Cookbook](https://github.com/OpenSQZ/MiniCPM-V-CookBook), featuring detailed instructions and practical examples.
-
-
-<details>
-<summary> Click to view evaluation results and examples of MiniCPM-V 4.0. </summary>
-
-### Evaluation  <!-- omit in toc -->
-
-<details>
-<summary>Click to view single image results on OpenCompass. </summary>
-<div align="center">
-<table style="margin: 0px auto;">
-    <thead>
-        <tr>
-            <th nowrap="nowrap" align="left">model</th>
-            <th nowrap="nowrap">Size</th>
-            <th nowrap="nowrap">Opencompass</th>
-            <th nowrap="nowrap">OCRBench</th>
-            <th nowrap="nowrap">MathVista</th>
-            <th nowrap="nowrap">HallusionBench</th>
-            <th nowrap="nowrap">MMMU</th>
-            <th nowrap="nowrap">MMVet</th>
-            <th nowrap="nowrap">MMBench V1.1</th>
-            <th nowrap="nowrap">MMStar</th>
-            <th nowrap="nowrap">AI2D</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-            <td colspan="11" align="left"><strong>Proprietary</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4v-20240409</td>
-            <td align="center">-</td>
-            <td align="center">63.5</td>
-            <td align="center">656</td>
-            <td align="center">55.2</td>
-            <td align="center">43.9</td>
-            <td align="center">61.7</td>
-            <td align="center">67.5</td>
-            <td align="center">79.8</td>
-            <td align="center">56.0</td>
-            <td align="center">78.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Gemini-1.5-Pro</td>
-            <td align="center">-</td>
-            <td align="center">64.5</td>
-            <td align="center">754</td>
-            <td align="center">58.3</td>
-            <td align="center">45.6</td>
-            <td align="center">60.6</td>
-            <td align="center">64.0</td>
-            <td align="center">73.9</td>
-            <td align="center">59.1</td>
-            <td align="center">79.1</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4.1-mini-20250414</td>
-            <td align="center">-</td>
-            <td align="center">68.9</td>
-            <td align="center">840</td>
-            <td align="center">70.9</td>
-            <td align="center">49.3</td>
-            <td align="center">55.0</td>
-            <td align="center">74.3</td>
-            <td align="center">80.9</td>
-            <td align="center">60.9</td>
-            <td align="center">76.0</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Claude 3.5 Sonnet-20241022</td>
-            <td align="center">-</td>
-            <td align="center">70.6</td>
-            <td align="center">798</td>
-            <td align="center">65.3</td>
-            <td align="center">55.5</td>
-            <td align="center">66.4</td>
-            <td align="center">70.1</td>
-            <td align="center">81.7</td>
-            <td align="center">65.1</td>
-            <td align="center">81.2</td>
-        </tr>
-        <tr>
-            <td colspan="11" align="left"><strong>Open-source</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2.5-VL-3B-Instruct</td>
-            <td align="center">3.8B</td>
-            <td align="center">64.5</td>
-            <td align="center">828</td>
-            <td align="center">61.2</td>
-            <td align="center">46.6</td>
-            <td align="center">51.2</td>
-            <td align="center">60.0</td>
-            <td align="center">76.8</td>
-            <td align="center">56.3</td>
-            <td align="center">81.4</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">InternVL2.5-4B</td>
-            <td align="center">3.7B</td>
-            <td align="center">65.1</td>
-            <td align="center">820</td>
-            <td align="center">60.8</td>
-            <td align="center">46.6</td>
-            <td align="center">51.8</td>
-            <td align="center">61.5</td>
-            <td align="center">78.2</td>
-            <td align="center">58.7</td>
-            <td align="center">81.4</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2.5-VL-7B-Instruct</td>
-            <td align="center">8.3B</td>
-            <td align="center">70.9</td>
-            <td align="center">888</td>
-            <td align="center">68.1</td>
-            <td align="center">51.9</td>
-            <td align="center">58.0</td>
-            <td align="center">69.7</td>
-            <td align="center">82.2</td>
-            <td align="center">64.1</td>
-            <td align="center">84.3</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">InternVL2.5-8B</td>
-            <td align="center">8.1B</td>
-            <td align="center">68.1</td>
-            <td align="center">821</td>
-            <td align="center">64.5</td>
-            <td align="center">49.0</td>
-            <td align="center">56.2</td>
-            <td align="center">62.8</td>
-            <td align="center">82.5</td>
-            <td align="center">63.2</td>
-            <td align="center">84.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-V-2.6</td>
-            <td align="center">8.1B</td>
-            <td align="center">65.2</td>
-            <td align="center">852</td>
-            <td align="center">60.8</td>
-            <td align="center">48.1</td>
-            <td align="center">49.8</td>
-            <td align="center">60.0</td>
-            <td align="center">78.0</td>
-            <td align="center">57.5</td>
-            <td align="center">82.1</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-o-2.6</td>
-            <td align="center">8.7B</td>
-            <td align="center">70.2</td>
-            <td align="center">889</td>
-            <td align="center">73.3</td>
-            <td align="center">51.1</td>
-            <td align="center">50.9</td>
-            <td align="center">67.2</td>
-            <td align="center">80.6</td>
-            <td align="center">63.3</td>
-            <td align="center">86.1</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-V-4.0</td>
-            <td align="center">4.1B</td>
-            <td align="center">69.0</td>
-            <td align="center">894</td>
-            <td align="center">66.9</td>
-            <td align="center">50.8</td>
-            <td align="center">51.2</td>
-            <td align="center">68.0</td>
-            <td align="center">79.7</td>
-            <td align="center">62.8</td>
-            <td align="center">82.9</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
-</details>
-
-<details>
-<summary>Click to view single image results on ChartQA, MME, RealWorldQA, TextVQA, DocVQA, MathVision, DynaMath, WeMath, Object HalBench and MM Halbench. </summary>
-
-<div align="center">
-<table style="margin: 0px auto;">
-    <thead>
-        <tr>
-            <th nowrap="nowrap" align="left">model</th>
-            <th nowrap="nowrap">Size</th>
-            <th nowrap="nowrap">ChartQA</th>
-            <th nowrap="nowrap">MME</th>
-            <th nowrap="nowrap">RealWorldQA</th>
-            <th nowrap="nowrap">TextVQA</th>
-            <th nowrap="nowrap">DocVQA</th>
-            <th nowrap="nowrap">MathVision</th>
-            <th nowrap="nowrap">DynaMath</th>
-            <th nowrap="nowrap">WeMath</th>
-            <th nowrap="nowrap" colspan="2">Obj Hal</th>
-            <th nowrap="nowrap" colspan="2">MM Hal</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center">CHAIRs↓</td>
-            <td align="center">CHAIRi↓</td>
-            <td nowrap="nowrap" align="center">score avg@3↑</td>
-            <td nowrap="nowrap" align="center">hall rate avg@3↓</td>
-        </tr>
-        <tbody align="center">
-        <tr>
-            <td colspan="14" align="left"><strong>Proprietary</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4v-20240409</td>
-            <td align="center">-</td>
-            <td align="center">78.5</td>
-            <td align="center">1927</td>
-            <td align="center">61.4</td>
-            <td align="center">78.0</td>
-            <td align="center">88.4</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Gemini-1.5-Pro</td>
-            <td align="center">-</td>
-            <td align="center">87.2</td>
-            <td align="center">-</td>
-            <td align="center">67.5</td>
-            <td align="center">78.8</td>
-            <td align="center">93.1</td>
-            <td align="center">41.0</td>
-            <td align="center">31.5</td>
-            <td align="center">50.5</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4.1-mini-20250414</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">45.3</td>
-            <td align="center">47.7</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Claude 3.5 Sonnet-20241022</td>
-            <td align="center">-</td>
-            <td align="center">90.8</td>
-            <td align="center">-</td>
-            <td align="center">60.1</td>
-            <td align="center">74.1</td>
-            <td align="center">95.2</td>
-            <td align="center">35.6</td>
-            <td align="center">35.7</td>
-            <td align="center">44.0</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-        </tr>
-        <tr>
-            <td colspan="14" align="left"><strong>Open-source</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2.5-VL-3B-Instruct</td>
-            <td align="center">3.8B</td>
-            <td align="center">84.0</td>
-            <td align="center">2157</td>
-            <td align="center">65.4</td>
-            <td align="center">79.3</td>
-            <td align="center">93.9</td>
-            <td align="center">21.9</td>
-            <td align="center">13.2</td>
-            <td align="center">22.9</td>
-            <td align="center">18.3</td>
-            <td align="center">10.8</td>
-            <td align="center">3.9 </td>
-            <td align="center">33.3 </td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">InternVL2.5-4B</td>
-            <td align="center">3.7B</td>
-            <td align="center">84.0</td>
-            <td align="center">2338</td>
-            <td align="center">64.3</td>
-            <td align="center">76.8</td>
-            <td align="center">91.6</td>
-            <td align="center">18.4</td>
-            <td align="center">15.2</td>
-            <td align="center">21.2</td>
-            <td align="center">13.7</td>
-            <td align="center">8.7</td>
-            <td align="center">3.2 </td>
-            <td align="center">46.5 </td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2.5-VL-7B-Instruct</td>
-            <td align="center">8.3B</td>
-            <td align="center">87.3</td>
-            <td align="center">2347</td>
-            <td align="center">68.5</td>
-            <td align="center">84.9</td>
-            <td align="center">95.7</td>
-            <td align="center">25.4</td>
-            <td align="center">21.8</td>
-            <td align="center">36.2</td>
-            <td align="center">13.3</td>
-            <td align="center">7.9</td>
-            <td align="center">4.1 </td>
-            <td align="center">31.6 </td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">InternVL2.5-8B</td>
-            <td align="center">8.1B</td>
-            <td align="center">84.8</td>
-            <td align="center">2344</td>
-            <td align="center">70.1</td>
-            <td align="center">79.1</td>
-            <td align="center">93.0</td>
-            <td align="center">17.0</td>
-            <td align="center">9.4</td>
-            <td align="center">23.5</td>
-            <td align="center">18.3</td>
-            <td align="center">11.6</td>
-            <td align="center">3.6 </td>
-            <td align="center">37.2</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-V-2.6</td>
-            <td align="center">8.1B</td>
-            <td align="center">79.4</td>
-            <td align="center">2348</td>
-            <td align="center">65.0</td>
-            <td align="center">80.1</td>
-            <td align="center">90.8</td>
-            <td align="center">17.5</td>
-            <td align="center">9.0</td>
-            <td align="center">20.4</td>
-            <td align="center">7.3</td>
-            <td align="center">4.7</td>
-            <td align="center">4.0 </td>
-            <td align="center">29.9 </td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-o-2.6</td>
-            <td align="center">8.7B</td>
-            <td align="center">86.9</td>
-            <td align="center">2372</td>
-            <td align="center">68.1</td>
-            <td align="center">82.0</td>
-            <td align="center">93.5</td>
-            <td align="center">21.7</td>
-            <td align="center">10.4</td>
-            <td align="center">25.2</td>
-            <td align="center">6.3</td>
-            <td align="center">3.4</td>
-            <td align="center">4.1 </td>
-            <td align="center">31.3 </td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-V-4.0</td>
-            <td align="center">4.1B</td>
-            <td align="center">84.4</td>
-            <td align="center">2298</td>
-            <td align="center">68.5</td>
-            <td align="center">80.8</td>
-            <td align="center">92.9</td>
-            <td align="center">20.7</td>
-            <td align="center">14.2</td>
-            <td align="center">32.7</td>
-            <td align="center">6.3</td>
-            <td align="center">3.5</td>
-            <td align="center">4.1 </td>
-            <td align="center">29.2 </td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
-</details>
-
-<details>
-<summary>Click to view multi-image and video understanding results on Mantis, Blink and Video-MME. </summary>
-<div align="center">
-<table style="margin: 0px auto;">
-    <thead>
-        <tr>
-            <th nowrap="nowrap" align="left">model</th>
-            <th nowrap="nowrap">Size</th>
-            <th nowrap="nowrap">Mantis</th>
-            <th nowrap="nowrap">Blink</th>
-            <th nowrap="nowrap" colspan="2" >Video-MME</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center"></td>
-            <td align="center">wo subs</td>
-            <td align="center">w subs</td>
-        </tr>
-        <tbody align="center">
-        <tr>
-            <td colspan="6" align="left"><strong>Proprietary</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4v-20240409</td>
-            <td align="center">-</td>
-            <td align="center">62.7</td>
-            <td align="center">54.6</td>
-            <td align="center">59.9</td>
-            <td align="center">63.3</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Gemini-1.5-Pro</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">59.1</td>
-            <td align="center">75.0</td>
-            <td align="center">81.3</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">GPT-4o-20240513</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
-            <td align="center">68.0</td>
-            <td align="center">71.9</td>
-            <td align="center">77.2</td>
-        </tr>
-        <tr>
-            <td colspan="6" align="left"><strong>Open-source</strong></td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2.5-VL-3B-Instruct</td>
-            <td align="center">3.8B</td>
-            <td align="center">-</td>
-            <td align="center">47.6</td>
-            <td align="center">61.5</td>
-            <td align="center">67.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">InternVL2.5-4B</td>
-            <td align="center">3.7B</td>
-            <td align="center">62.7</td>
-            <td align="center">50.8</td>
-            <td align="center">62.3</td>
-            <td align="center">63.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">Qwen2.5-VL-7B-Instruct</td>
-            <td align="center">8.3B</td>
-            <td align="center">-</td>
-            <td align="center">56.4</td>
-            <td align="center">65.1</td>
-            <td align="center">71.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">InternVL2.5-8B</td>
-            <td align="center">8.1B</td>
-            <td align="center">67.7</td>
-            <td align="center">54.8</td>
-            <td align="center">64.2</td>
-            <td align="center">66.9</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-V-2.6</td>
-            <td align="center">8.1B</td>
-            <td align="center">69.1</td>
-            <td align="center">53.0</td>
-            <td align="center">60.9</td>
-            <td align="center">63.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-o-2.6</td>
-            <td align="center">8.7B</td>
-            <td align="center">71.9</td>
-            <td align="center">56.7</td>
-            <td align="center">63.9</td>
-            <td align="center">69.6</td>
-        </tr>
-        <tr>
-            <td nowrap="nowrap" align="left">MiniCPM-V-4.0</td>
-            <td align="center">4.1B</td>
-            <td align="center">71.4</td>
-            <td align="center">54.0</td>
-            <td align="center">61.2</td>
-            <td align="center">65.8</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
-</details>
-
-### Examples <!-- omit in toc -->
-
-<div style="display: flex; flex-direction: column; align-items: center;">
-  <img src="./assets/minicpmv4/minicpm-v-4-case.png" alt="math" style="margin-bottom: 5px;">
-</div>
-
-We deploy MiniCPM-V 4.0 on iPhone 16 Pro Max with [iOS demo](https://github.com/OpenSQZ/MiniCPM-V-CookBook/blob/main/demo/ios_demo/ios.md). The demo video is the raw screen recording without edition.
-
-<table align="center"> 
-    <p align="center">
-      <img src="./assets/minicpmv4/iphone_en.gif" width=45%/>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="./assets/minicpmv4/iphone_en_information_extraction.gif" width=45%/>
-    </p>
-    <p align="center">
-      <img src="./assets/minicpmv4/iphone_cn.gif" width=45%/>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="./assets/minicpmv4/iphone_cn_funny_points.gif" width=45%/>
-    </p>
-</table> 
-
-
-</details>
 
 
 ## Model Zoo
 
 | Model           | Device | Memory    | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Description       | Download |
 |:-----------|:--:|:-----------:|:-------------------|:---------------:|
+| MiniCPM-V 4.6 | GPU | 4 GB | The smallest MiniCPM-V model to date, with strong encoding and decoding efficiency for single-image, multi-image, and video understanding tasks. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6) |
+| MiniCPM-V 4.6 gguf | CPU | 2 GB | The gguf version, lower memory usage and faster inference. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-gguf) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-gguf) |
+| MiniCPM-V 4.6 BNB | GPU | 3 GB | The BNB (bitsandbytes int4) quantized version, lower GPU memory usage. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-BNB) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-BNB) |
+| MiniCPM-V 4.6 AWQ | GPU | 3 GB | The AWQ quantized version, lower GPU memory usage. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-AWQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-AWQ) |
+| MiniCPM-V 4.6 GPTQ | GPU | 3 GB | The GPTQ quantized version, lower GPU memory usage. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-GPTQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-GPTQ) |
+| MiniCPM-V 4.6 Thinking | GPU | 4 GB | The thinking variant, supporting deep reasoning for more complex problem solving. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-Thinking) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-Thinking) |
+| MiniCPM-V 4.6 Thinking gguf | CPU | 2 GB | The gguf version of the thinking variant, lower memory usage and faster inference. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-Thinking-gguf) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-Thinking-gguf) |
+| MiniCPM-V 4.6 Thinking BNB | GPU | 3 GB | The BNB (bitsandbytes int4) quantized version of the thinking variant, lower GPU memory usage. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-Thinking-BNB) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-Thinking-BNB) |
+| MiniCPM-V 4.6 Thinking AWQ | GPU | 3 GB | The AWQ quantized version of the thinking variant, lower GPU memory usage. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-Thinking-AWQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-Thinking-AWQ) |
+| MiniCPM-V 4.6 Thinking GPTQ | GPU | 3 GB | The GPTQ quantized version of the thinking variant, lower GPU memory usage. | [🤗](https://huggingface.co/openbmb/MiniCPM-V-4.6-Thinking-GPTQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4.6-Thinking-GPTQ) |
 | MiniCPM-o 4.5| GPU | 19 GB  | The latest version, strong end-side multimodal performance for vision, speech and omni-modal live streaming on end-side devices.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-o-4_5) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-o-4_5) |
 | MiniCPM-o 4.5 gguf| GPU | 10 GB  | The gguf version, lower memory usage and faster inference.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-o-4_5-gguf) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-o-4_5-gguf) |
-| MiniCPM-o 4.5 AWQ | GPU | 11 GB  | The AWQ quantized version, lower GPU memory usage.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4_5-AWQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-o-4_5-awq) |
-| MiniCPM-V 4.0| GPU | 9 GB  | The latest version, strong end-side multimodal performance for single image, multi-image and video understanding.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4) |
-| MiniCPM-V 4.0 gguf | CPU | 4 GB  | The gguf version, lower memory usage and faster inference.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4-gguf) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4-gguf) |
-| MiniCPM-V 4.0 int4 | GPU | 5 GB  | The int4 quantized version, lower GPU memory usage.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4-int4) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4-int4) |
-| MiniCPM-V 4.0 AWQ  | GPU | 5 GB  | The AWQ quantized version, lower GPU memory usage.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-V-4-AWQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-V-4-AWQ) |
+| MiniCPM-o 4.5 AWQ | GPU | 11 GB  | The AWQ quantized version, lower GPU memory usage.   |  [🤗](https://huggingface.co/openbmb/MiniCPM-o-4_5-AWQ) &nbsp;&nbsp; [<img src="./assets/modelscope_logo.png" width="20px"></img>](https://modelscope.cn/models/OpenBMB/MiniCPM-o-4_5-awq) |
 
 
 ## Legacy Models <!-- omit in toc --> 
 
 | Model                | Introduction and Guidance       |
 |:----------------------|:-------------------:|
+| MiniCPM-V 4.0  | [Document](./docs/minicpm_v4_en.md)   |
 | MiniCPM-V 4.5  | [Document](./docs/minicpm_v4dot5_en.md)   | 
 | MiniCPM-o 2.6  | [Document](./docs/minicpm_o2dot6_en.md)   | 
 | MiniCPM-V 2.6  | [Document](./docs/minicpm_v2dot6_en.md)   | 
@@ -2921,9 +2654,7 @@ We deploy MiniCPM-V 4.0 on iPhone 16 Pro Max with [iOS demo](https://github.com/
 | OmniLMM-12B  | [Document](././docs/omnilmm_en.md)   |  
 
 
-
-
-## Awesome work using MiniCPM-V & MiniCPM-o
+## Awesome work using MiniCPM-V & o
 - [text-extract-api](https://github.com/CatchTheTornado/text-extract-api): Document extraction API using OCRs and Ollama supported models ![GitHub Repo stars](https://img.shields.io/github/stars/CatchTheTornado/text-extract-api)
 - [comfyui_LLM_party](https://github.com/heshengtao/comfyui_LLM_party): Build LLM workflows and integrate into existing image workflows ![GitHub Repo stars](https://img.shields.io/github/stars/heshengtao/comfyui_LLM_party)
 - [Ollama-OCR](https://github.com/imanoop7/Ollama-OCR): OCR package uses vlms through Ollama to extract text from images and PDF ![GitHub Repo stars](https://img.shields.io/github/stars/imanoop7/Ollama-OCR)
@@ -2932,13 +2663,6 @@ We deploy MiniCPM-V 4.0 on iPhone 16 Pro Max with [iOS demo](https://github.com/
 - [pensieve](https://github.com/arkohut/pensieve): A privacy-focused passive recording project by recording screen content ![GitHub Repo stars](https://img.shields.io/github/stars/arkohut/pensieve)
 - [paperless-gpt](https://github.com/icereed/paperless-gpt): Use LLMs to handle paperless-ngx, AI-powered titles, tags and OCR ![GitHub Repo stars](https://img.shields.io/github/stars/icereed/paperless-gpt)
 - [Neuro](https://github.com/kimjammer/Neuro): A recreation of Neuro-Sama, but running on local models on consumer hardware ![GitHub Repo stars](https://img.shields.io/github/stars/kimjammer/Neuro)
-
-## Limitations
-As an experimental trial, we find MiniCPM-o 4.5 has notable limitations worth further investigation and improvement.
-- **Foundation Capability.** The full-duplex omni-modality live streaminig capability still needs improvement in its foundation capability.
-- **Unstable Speech Output in Omni Mode.** Speech synthesis can mispronounce characters in full-duplex omni-modal live streaminig mode.
-- **Mixed Language.** The model can sometimes respond with mixed English and Chinese in speech and omni mode.
-- **High-latency on Web Demo.** Users may experience unusual high-latency or even miss part of model output fragments when using our web demo hosted on overseas servers. We recommend deploying the demo locally or with good network connections.
 
 ## Model License <!-- omit in toc -->
 
@@ -2951,16 +2675,6 @@ As an experimental trial, we find MiniCPM-o 4.5 has notable limitations worth fu
 As MLLMs, MiniCPM-o/V models generate content by learning a large number of multimodal corpora, but they cannot comprehend, express personal opinions, or make value judgements. Anything generated by MiniCPM-o/V models does not represent the views and positions of the model developers
 
 We will not be liable for any problems arising from the use of MiniCPM-o/V models, including but not limited to data security issues, risk of public opinion, or any risks and problems arising from the misdirection, misuse, dissemination, or misuse of the model.
-
-## Acknowledgements
-
-We would like to thank the following projects:
-* [Qwen3](https://huggingface.co/Qwen/Qwen3-8B) for providing language backbone
-* [SigLIP2](https://github.com/google-research/big_vision/blob/main/big_vision/configs/proj/image_text/README_siglip2.md) for providing vision understanding module
-* [Whisper](https://github.com/openai/whisper) for providing audio and speech understanding module
-* [CosyVoice2](https://github.com/FunAudioLLM/CosyVoice) and [Step-Audio2](https://github.com/stepfun-ai/Step-Audio2) for providing speech tokenizer and high-efficiency Token2Wav module.
-* [Transformers](https://github.com/huggingface/transformers)
-
 
 ## Institutions  <!-- omit in toc -->
 
@@ -2980,11 +2694,13 @@ This project is developed by the following institutions:
  </picture>
 </a>
 
-## Key Techniques and Other Multimodal Projects <!-- omit in toc -->
+## Technical Reports and Key Techniques Papers
 
-👏 Welcome to explore key techniques of MiniCPM-o/V and other multimodal projects of our team:
+👏 Welcome to explore key techniques and research of MiniCPM-o/V:
 
-[VisCPM](https://github.com/OpenBMB/VisCPM/tree/main) | [RLPR](https://github.com/OpenBMB/RLPR) | [RLHF-V](https://github.com/RLHF-V/RLHF-V) | [LLaVA-UHD](https://github.com/thunlp/LLaVA-UHD) | [RLAIF-V](https://github.com/RLHF-V/RLAIF-V)
+**Technical Reports:** [MiniCPM-o 4.5](https://huggingface.co/papers/2604.27393) | [MiniCPM-V 4.5](https://arxiv.org/abs/2509.18154) | [MiniCPM-o 2.6](https://openbmb.notion.site/MiniCPM-o-2-6-A-GPT-4o-Level-MLLM-for-Vision-Speech-and-Multimodal-Live-Streaming-on-Your-Phone-185ede1b7a558042b5d5e45e6b237da9) | [MiniCPM-Llama3-V 2.5](https://arxiv.org/abs/2408.01800) | [MiniCPM-V 2.0](https://openbmb.vercel.app/minicpm-v-2)
+
+**Research:** [LLaVA-UHD](https://github.com/thunlp/LLaVA-UHD) | [VisCPM](https://github.com/OpenBMB/VisCPM/tree/main) | [RLPR](https://github.com/OpenBMB/RLPR) | [RLHF-V](https://github.com/RLHF-V/RLHF-V)   | [RLAIF-V](https://github.com/RLHF-V/RLAIF-V) | [LLaVA-UHD-v4](https://github.com/THUMAI-Lab/LLaVA-UHD-v4)
 
 
 ## Citation <!-- omit in toc -->
@@ -2992,6 +2708,20 @@ This project is developed by the following institutions:
 If you find our model/code/paper helpful, please consider citing our papers 📝 and staring us ⭐️！
 
 ```bib
+@misc{cui2026minicpmo45realtimefullduplex,
+      title={MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction}, 
+      author={Junbo Cui and Bokai Xu and Chongyi Wang and Tianyu Yu and Weiyue Sun and Yingjing Xu and Tianran Wang and Zhihui He and Wenshuo Ma and Tianchi Cai and others},
+      year={2026},
+      url={https://arxiv.org/abs/2604.27393}, 
+}
+
+@proceedings{yu2025minicpmv45cookingefficient,
+      title={MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and Training Recipe}, 
+      author={Tianyu Yu and Zefan Wang and Chongyi Wang and Fuwei Huang and Wenshuo Ma and Zhihui He and Tianchi Cai and Weize Chen and Yuxiang Huang and Yuanqian Zhao and others},
+      year={2025},
+      url={https://arxiv.org/abs/2509.18154}, 
+}
+
 @article{yao2024minicpm,
   title={MiniCPM-V: A GPT-4V Level MLLM on Your Phone},
   author={Yao, Yuan and Yu, Tianyu and Zhang, Ao and Wang, Chongyi and Cui, Junbo and Zhu, Hongji and Cai, Tianchi and Li, Haoyu and Zhao, Weilin and He, Zhihui and others},
