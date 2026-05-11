@@ -149,12 +149,12 @@
 **MiniCPM-V 4.6 Inference Efficiency**
 <table align="center">
   <tr>
-    <td align="center"><b>High-Concurrency Throughput</b></td>
-    <td align="center"><b>Single Request TTFT (ms)</b></td>
+    <td align="center" width="50%"><b>High-Concurrency Throughput</b></td>
+    <td align="center" width="50%"><b>Single Request TTFT (ms)</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="./assets/minicpmv4.6/throughput.png" width="90%"></img></td>
-    <td align="center"><img src="./assets/minicpmv4.6/ttft.png" width="100%"></img></td>
+    <td align="center" valign="middle"><img src="./assets/minicpmv4.6/throughput.png" width="110%"></img></td>
+    <td align="center" valign="middle"><img src="./assets/minicpmv4.6/ttft.png" width="100%"></img></td>
   </tr>
 </table>
 
